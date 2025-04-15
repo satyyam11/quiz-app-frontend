@@ -1,0 +1,25 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin-right: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
