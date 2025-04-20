@@ -16,7 +16,7 @@ const TakeQuiz = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/quizzes/${id}/questions`, {
+        const res = await axios.get(`https://quizapp-8pi9.onrender.com/api/quizzes/${id}/questions`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
@@ -65,7 +65,7 @@ const TakeQuiz = () => {
   const submitQuiz = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/quizzes/${id}/submit`,
+        `https://quizapp-8pi9.onrender.com/api/quizzes/${id}/submit`,
         { answers },
         {
           headers: {
