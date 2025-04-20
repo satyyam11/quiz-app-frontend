@@ -33,10 +33,10 @@ const Register = () => {
           password
         };
         
-        const res = await axios.post('http://localhost:8080/api/auth/register', newUser);
+        const res = await axios.post('https://quizapp-8pi9.onrender.com/api/auth/register', newUser);
         
         // After successful registration, login the user
-        const loginRes = await axios.post('http://localhost:8080/api/auth/login', {
+        const loginRes = await axios.post('https://quizapp-8pi9.onrender.com/api/auth/login', {
           username,
           password
         });

@@ -40,7 +40,7 @@ const Quiz = () => {
       
       // Try with fetch API instead of axios as an alternative approach
       try {
-        const response = await fetch(`http://localhost:8080/quiz/take/${userId}`, {
+        const response = await fetch(`https://quizapp-8pi9.onrender.com/quiz/take/${userId}`, {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -62,7 +62,7 @@ const Quiz = () => {
         
         // Fallback to axios if fetch fails
         console.log('Trying with axios as fallback...');
-        const axiosResponse = await axios.post(`http://localhost:8080/quiz/take/${userId}`, {}, {
+        const axiosResponse = await axios.post(`https://quizapp-8pi9.onrender.com/quiz/take/${userId}`, {}, {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -108,7 +108,7 @@ const Quiz = () => {
         answer: selectedAnswer
       });
       
-      const submitResponse = await axios.post(`http://localhost:8080/quiz/submit/${userId}`, {
+      const submitResponse = await axios.post(`https://quizapp-8pi9.onrender.com/quiz/submit/${userId}`, {
         questionId: question.id,
         answer: selectedAnswer
       }, {
@@ -121,7 +121,7 @@ const Quiz = () => {
       console.log('Submit answer response:', submitResponse.data);
       
       // Get next question
-      const nextQuestionResponse = await axios.post(`http://localhost:8080/quiz/take/${userId}`, {}, {
+      const nextQuestionResponse = await axios.post(`https://quizapp-8pi9.onrender.com/quiz/take/${userId}`, {}, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -152,7 +152,7 @@ const Quiz = () => {
       
       console.log('Ending quiz for user:', userId);
       
-      const response = await axios.post(`http://localhost:8080/quiz/end/${userId}`, {}, {
+      const response = await axios.post(`https://quizapp-8pi9.onrender.com/quiz/end/${userId}`, {}, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'

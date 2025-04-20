@@ -29,7 +29,7 @@ const Dashboard = () => {
       
       console.log('Fetching dashboard data for user:', userId);
       
-      const response = await axios.get(`http://localhost:8080/dashboard/${userId}`, {
+      const response = await axios.get(`https://quizapp-8pi9.onrender.com/dashboard/${userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

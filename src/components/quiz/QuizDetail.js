@@ -11,7 +11,7 @@ const QuizDetail = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/quizzes/${id}`, {
+        const res = await axios.get(`https://quizapp-8pi9.onrender.com/api/quizzes/${id}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }

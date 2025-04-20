@@ -32,7 +32,7 @@ const Login = () => {
       
       console.log('Attempting login with:', loginData);
       
-      const res = await axios.post('http://localhost:8080/api/auth/login', loginData);
+      const res = await axios.post('https://quizapp-8pi9.onrender.com/api/auth/login', loginData);
       
       console.log('Login response:', res.data);
       
@@ -41,7 +41,7 @@ const Login = () => {
       
       // Try to get user info
       try {
-        const userRes = await axios.get('http://localhost:8080/user/me', {
+        const userRes = await axios.get('https://quizapp-8pi9.onrender.com/user/me', {
           headers: {
             'Authorization': `Bearer ${res.data.token}`
           }

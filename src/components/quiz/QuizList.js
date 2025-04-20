@@ -10,7 +10,7 @@ const QuizList = () => {
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
-        const res = await axios.get('http://localhost:8080/api/quizzes', {
+        const res = await axios.get('https://quizapp-8pi9.onrender.com/api/quizzes', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
