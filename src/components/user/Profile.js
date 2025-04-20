@@ -18,7 +18,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const res = await axios.get('http://localhost:8080/api/users/profile', {
+        const res = await axios.get('https://quizapp-8pi9.onrender.com/api/users/profile', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
@@ -57,7 +57,7 @@ const Profile = () => {
     
     try {
       const res = await axios.put(
-        'http://localhost:8080/api/users/profile',
+        'https://quizapp-8pi9.onrender.com/api/users/profile',
         formData,
         {
           headers: {
