@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080';
+const API_URL = 'https://quizapp-8pi9.onrender.com'; // Updated base URL
 
 // Create axios instance with default config
 const api = axios.create({
